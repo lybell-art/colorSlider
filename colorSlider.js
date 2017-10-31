@@ -1,7 +1,7 @@
 var slider, step;
 function setup()
 {
-	createCanvas(600,600);
+	createCanvas(windowWidth,windowHeight);
 	slider=createSlider(5,50,10);
 	slider.position(20,20);
 	colorMode(HSB,360,100,100);
