@@ -20,4 +20,9 @@ function draw()
 			rect(x,y,step,step);
 		}
 	}
+	if(mouseIsPressed)
+	{
+		c=color(map(mouseX-mouseX%step,0,width,0,360),map(mouseY-mouseY%step,0,width,100,0),100);
+		background(c);
+	}
 }
