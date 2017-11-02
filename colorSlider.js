@@ -25,7 +25,7 @@ function draw()
 	}
 	if(mouseIsPressed&&!isSliderPressed)
 	{
-		c=color(map(mouseX-mouseX%step,0,width,0,360),map(mouseY-mouseY%step,0,width,100,0),100);
+		c=color(map(mouseX-mouseX%step,0,width,0,360),map(mouseY-mouseY%step,0,height,100,0),100);
 		background(c);
 	}
 }
