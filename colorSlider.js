@@ -1,9 +1,12 @@
 var slider, step;
+var isSliderPressed;
 function setup()
 {
 	createCanvas(windowWidth,windowHeight);
 	slider=createSlider(5,50,10);
 	slider.position(20,20);
+	slider.mousePressed(function(){isSliderPressed=true;});
+	slider.mouseReleased(function(){isSliderPressed=false;});
 	colorMode(HSB,360,100,100);
 	noStroke();
 }
@@ -20,7 +23,7 @@ function draw()
 			rect(x,y,step,step);
 		}
 	}
-	if(mouseIsPressed)
+	if(mouseIsPressed&&!isSliderPressed)
 	{
 		c=color(map(mouseX-mouseX%step,0,width,0,360),map(mouseY-mouseY%step,0,width,100,0),100);
 		background(c);
